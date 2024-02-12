@@ -15,6 +15,7 @@ let resultArea = document.getElementById("result-area");
 let resetButton = document.getElementById("reset-button");
 let chances = 5;
 let gameOver = false;
+let correct = false;
 let chanceArea = document.getElementById("chance-area");
 let history = [];
 let upCat = document.getElementsByClassName("up-cat")[0];
@@ -57,21 +58,22 @@ function play() {
         downCat.style.display = "block";
     } else {
         resultArea.textContent = 'correct!';
-        gameOver = true;
+        correct = true;
     }
     history.push(userValue);
 
-    if (chances <= 0) {
+    if (chances <= 0 || correct) {
         gameOver = true;
     }
     if (gameOver) {
         playButton.disabled = true;
         upCat.style.display = "none";
         downCat.style.display = "none";
-        if (chances <= 0) {
+        if (!correct) {
             resultArea.textContent = '실패!';
             resultArea.style.color = "red";
             punchCat.style.display = "block";
+            chanceArea.textContent = `정답: ${answer}`;
         } else {
             resultArea.textContent = '성공!';
             resultArea.style.color = "rgb(106, 255, 0)";
