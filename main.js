@@ -97,6 +97,7 @@ function reset() {
     punchCat.style.display = "none";
     spaceCat.style.display = "none";
     resultArea.style.color = "white";
+    correct = false;
 }
 
 pickRandomNumber();
