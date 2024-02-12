@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>숫자 맞추기 게임!</h1>
-    <div id="result-area">결과가 나온다</div>
-    <input type="number" id="user-input"/>
-    <button id="play-button">Go!</button>
-
+<body class="p-3 mb-2 text-white">
+    <main class="container d-flex justify-content-center flex-column mt-5 border rounded border-5 border-white">
+        <h1 class="text-center mt-5 mb-4">숫자 맞추기 게임!</h1>
+        <h5 class="text-center mt-4 mb-5">냥펀을 맞기 싫다면 맞춰라</h5>
+        
+        <div id="result-area" class="text-center mt-5 mb-4 pt-1 pb-1 border align-self-center w-75">여기에 결과가 나온다</div>
+        <img src="assets/up_cat.jpeg" height=250 class="align-self-center up-cat"/>
+        <img src="assets/down_cat.jpeg" height=250 class="align-self-center down-cat"/>
+        <img src="assets/np.gif" height=250 class="align-self-center punch-cat"/>
+        <img src="assets/scgif.gif" height=250 class="align-self-center space-cat"/>
+        
+        
+        
+        <div id="chance-area" class="text-center mb-4 mt-5">남은 기회: 5번</div>
+        <div class="row d-flex justify-content-evenly mb-5">
+            <input type="number" placeholder="1부터 100까지 숫자를 입력" id="user-input" class="col-6"/>
+            <button type="button" id="play-button" class="btn btn-primary col-2">Go!</button>
+            <button id="reset-button" class="btn btn-warning col-2">Reset!</button>
+        </div>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>

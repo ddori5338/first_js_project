@@ -1,0 +1,47 @@
+input::-webkit-inner-spin-button {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+body {
+    background-image: url("assets/black_cat.jpeg");
+}
+main {
+    background-color: darkgray;
+    background-color: rgba(0,0,0,0.3);
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h5 {
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+}
+
+#result-area {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+#chance-area {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.up-cat {
+    display: none;
+}
+
+.down-cat {
+    display: none;
+}
+
+.punch-cat {
+    display: none;
+}
+
+.space-cat {
+    display: none;
+}
